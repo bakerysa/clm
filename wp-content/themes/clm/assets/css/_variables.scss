@@ -1,0 +1,19 @@
+// fonts
+
+@font-face {
+    font-family: 'din_condensedbold';
+    src: url('assets/fonts/din_condensed_bold-webfont.woff2') format('woff2'),
+         url('assets/fonts/din_condensed_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$font-din: 'din_condensedbold';
+$font-raleway: 'Raleway', sans-serif;
+
+// colours
+
+$color-red: #c0392d;
+$color-grey: lightgrey;
+$color-grey-light: #eeeeee;

@@ -1,0 +1,337 @@
+@media only screen and (max-width : 991px) {
+
+  .tradezone {
+  	display: block;
+  }
+
+  .site-branding {
+    max-width: 6rem;
+    margin: 0.5rem;
+    margin-top: -1rem;
+    margin-left: 1rem;
+  }
+
+  .menu-toggle {
+    margin-top: 2rem;
+  }
+
+  .mtb-100 {
+  	margin-top: 0;
+  	margin-bottom: 0;
+  }
+
+
+  .contact-cta {
+    text-align: left !important;
+  	margin-top: 0;
+  	padding-top: 4rem;
+  }
+
+  .redline {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-regions {
+    padding-top: 2rem;
+  }
+
+  footer {
+    .site-info {
+      .wine {
+        position: relative;
+        left: auto;
+        bottom: auto;
+      }
+      .social-icons {
+        right: auto;
+        bottom: auto;
+        color: white;
+        position: relative;
+        z-index: 10;
+      }
+    }
+  }
+
+  .site-footer {
+  	margin-top: 4rem;
+  	background-color: black;
+  	padding: 2rem;
+  	color: white;
+  }
+
+  .wine {
+    text-align: center;
+  }
+
+  .header-title {
+    display: none!important;
+  }
+
+  .entry-header {
+  	height: 2rem;
+  }
+
+  .h-button-fix {
+  	display: block;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .h-mobile-fix {
+  	padding: 0rem!important;
+  	text-align: center!important;
+    max-width: 99999px !important;
+    float: none!important;
+    img {
+      float: none!important;
+        margin: 0 auto!important;
+    }
+  }
+
+  .brand-single-intro {
+    padding-top: 2rem;
+    padding-right: 0;
+  	text-align: center;
+  }
+
+  .product {
+  	.images {
+  		img {
+        max-height: 400px;
+        margin-top: 5em;
+  		}
+  	}
+  }
+
+  .woocommerce-page {
+  	.site-branding {
+  		a {
+  			opacity: 1;
+  		}
+  	}
+  }
+
+  .product-aux {
+  	border: none;
+  }
+
+  .entry-summary {
+    text-align: center;
+    .product_title {
+      text-align:center!important;
+      font-size: 3em!important;
+      letter-spacing: 6px!important;
+    }
+  }
+
+  .brand-single-container {
+    p {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+		.owl-next {
+    	right: 0;
+      width: 70px;
+      text-align: right;
+      img {
+        max-width: 40px;
+      }
+		}
+		.owl-prev {
+    	left: 0;
+      width: 70px;
+      display: block;
+      img {
+        max-width: 40px;
+      }
+		}
+  }
+
+  .main-navigation {
+    display: block;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .accounts {
+    position: absolute;
+    top: 1.5rem;
+    right: 0.7rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    width: 40%;
+    a {
+      white-space: nowrap;
+
+    }
+    .btn {
+      display: block;
+      padding: 0.7rem 0.5rem;
+    }
+    .btn-secondary {
+      display: block;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  .main-navigation li {
+    width: 100%;
+    text-align: left;
+    border: 2px solid black;
+    padding: 1em;
+    margin: -2px 0 0 0 ;
+    &.current-menu-item, &:hover {
+      text-decoration: none;
+      background: black;
+      color: white!important;
+      a {
+        color: white!important;
+      }
+    }
+      a {
+        text-decoration: none;
+        display: block;
+        font-size: 1.7em;
+      }
+      .description {
+        text-decoration: none;
+        display: block;
+        font-size: 12px;
+        font-family: $font-raleway;
+        text-transform: none;
+        letter-spacing: 1px;
+        line-height: 18px;
+      }
+  }
+
+  .modal, .modal-backdrop {
+    display: none!important;
+  }
+
+  .entry-title {
+    display: none;
+  }
+
+  .ptb-100 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .prev_button {
+    padding: 11rem 1rem 1rem 1rem;
+    border: 0;
+    &:hover {
+      background: transparent;
+      color: black;
+      i {
+          color: black;
+      }
+    }
+  }
+
+  .next_button {
+    padding: 11rem 1rem 1rem 1rem;
+    border: 0;
+    &:hover {
+      background: transparent;
+      color: black;
+      i {
+          color: black;
+      }
+    }
+  }
+
+  .entry-summary {
+  	padding-right: 0 !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .woocommerce-product-gallery {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    width: 100% !important;
+    float: none !important;
+    img {
+      clear: right !important;
+    }
+  }
+
+  .btn-secondary {
+    padding: 0.8rem 1rem;
+  }
+
+  .searchandfilter {
+    max-width: 30rem;
+    margin: 1rem;
+  }
+
+  .cocktail-item {
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .entry-title {
+  	letter-spacing: 1rem;
+  }
+
+  .close-product {
+  	margin: 0 auto;
+    padding-top: 4rem;
+  }
+
+    .close-cocktail {
+    	margin: 0 auto;
+    }
+
+  .woocommerce-product-gallery__image {
+  	padding-top: 0rem;
+  }
+
+  .product_meta {
+    padding-bottom: 1rem;
+  }
+
+  .brand-filters {
+  	a {
+  		margin: 2px;
+  	}
+  }
+
+  .searchandfilter {
+  	ul {
+  		& > li {
+  			width: 100%;
+  			display: block;
+  			float: none;
+  			position: relative;
+  			padding: 1rem;
+  			& > ul {
+  				& li {
+  					width: 100%;
+  					display: block;
+  					padding: 0;
+  				}
+  			}
+  			input[type="submit"] {
+  				left: calc(50% - 23px);
+  			}
+  		}
+  	}
+  }
+
+  .popuptext {
+    width: 80%;
+  }
+
+}
