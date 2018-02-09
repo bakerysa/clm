@@ -45,6 +45,7 @@ if ( ! function_exists( 'clm_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'clm' ),
+			'menu-2' => esc_html__( 'Mobile', 'clm' ),
 		) );
 
 		/*
@@ -219,14 +220,30 @@ function remove_sidebar_product_pages() {
 
 // add menu description to wp menu
 function add_description_to_menu($item_output, $item, $depth, $args) {
+	$menu_locations = get_nav_menu_locations();
+
+    if ( has_term($menu_locations['menu-1'], 'nav_menu', $item) ) {
     if (strlen($item->description) > 0 ) {
         // append description after link
         $item_output .= sprintf('<span class="description">%s</span>', esc_html($item->description));
     }
-
-    return $item_output;
+	}
+	return $item_output;
 }
 add_filter('walker_nav_menu_start_el', 'add_description_to_menu', 10, 4);
+
+function prefix_nav_description( $item_output, $item, $depth, $args ) {
+
+	$menu_locations = get_nav_menu_locations();
+
+    if ( has_term($menu_locations['menu-2'], 'nav_menu', $item) ) {
+			if ( !empty( $item->description ) ) {
+					$item_output = str_replace( $args->link_after . '</a>', '<p class="description">' . $item->description . '</p>' . $args->link_after . '</a>', $item_output );
+			}
+    }
+		return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 4 );
 
 // ACF options page
 if( function_exists('acf_add_options_page') ) {
@@ -251,4 +268,12 @@ function organicweb_exclude_category( $terms, $taxonomies, $args ) {
     $terms = $new_terms;
   }
   return $terms;
+}
+
+add_action( 'after_setup_theme', 'bbloomer_remove_zoom_lightbox_theme_support', 99 );
+
+function bbloomer_remove_zoom_lightbox_theme_support() {
+remove_theme_support( 'wc-product-gallery-zoom' );
+remove_theme_support( 'wc-product-gallery-lightbox' );
+remove_theme_support( 'wc-product-gallery-slider' );
 }

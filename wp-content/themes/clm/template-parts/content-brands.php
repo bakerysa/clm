@@ -26,6 +26,8 @@
 
     $args = array(
       'taxonomy'   => "product_cat",
+      'orderby'    => 'title',
+      'order'      => 'ASC',
       'number'     => $number,
       'hide_empty' => $hide_empty,
       'include'    => $ids

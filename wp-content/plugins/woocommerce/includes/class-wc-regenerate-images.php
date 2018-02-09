@@ -30,7 +30,7 @@ class WC_Regenerate_Images {
 		include_once WC_ABSPATH . 'includes/class-wc-regenerate-images-request.php';
 		self::$background_process = new WC_Regenerate_Images_Request();
 
-		if ( apply_filters( 'woocommerce_resize_images', true ) && ! is_admin() ) {
+		if ( ! is_admin() ) {
 			// Handle on-the-fly image resizing.
 			add_filter( 'wp_get_attachment_image_src', array( __CLASS__, 'maybe_resize_image' ), 10, 4 );
 		}
@@ -54,8 +54,13 @@ class WC_Regenerate_Images {
 	 * @return array
 	 */
 	public static function maybe_resize_image( $image, $attachment_id, $size, $icon ) {
+
+		if ( ! apply_filters( 'woocommerce_resize_images', true ) ) {
+			return $image;
+		}
+
 		// Use a whitelist of sizes we want to resize. Ignore others.
-		if ( ! in_array( $size, array( 'woocommerce_thumbnail', 'woocommerce_single', 'shop_thumbnail', 'shop_catalog', 'shop_single' ), true ) ) {
+		if ( ! in_array( $size, apply_filters( 'woocommerce_image_sizes_to_resize', array( 'woocommerce_thumbnail', 'woocommerce_single', 'shop_thumbnail', 'shop_catalog', 'shop_single' ) ), true ) ) {
 			return $image;
 		}
 
@@ -69,7 +74,7 @@ class WC_Regenerate_Images {
 		$size_settings = wc_get_image_size( $size );
 
 		// If size differs from image meta, regen.
-		if ( isset( $imagemeta['sizes'], $imagemeta['sizes'][ $size ] ) && ( $imagemeta['sizes'][ $size ]['width'] !== $size_settings['width'] || $imagemeta['sizes'][ $size ]['height'] !== $size_settings['height'] ) ) {
+		if ( ! isset( $imagemeta['sizes'], $imagemeta['sizes'][ $size ] ) || $imagemeta['sizes'][ $size ]['width'] !== $size_settings['width'] || ( $size_settings['crop'] && $imagemeta['sizes'][ $size ]['height'] !== $size_settings['height'] ) ) {
 			$image = self::resize_and_return_image( $attachment_id, $image, $size, $icon );
 		}
 
@@ -182,7 +187,7 @@ class WC_Regenerate_Images {
 	private static function queue_image_regeneration() {
 		global $wpdb;
 		// First lets cancel existing running queue to avoid running it more than once.
-		self::$background_process->cancel_process();
+		self::$background_process->kill_process();
 
 		// Now lets find all product image attachments IDs and pop them onto the queue.
 		$images = $wpdb->get_results( // @codingStandardsIgnoreLine

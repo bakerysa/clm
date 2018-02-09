@@ -20,7 +20,7 @@ final class WooCommerce {
 	 *
 	 * @var string
 	 */
-	public $version = '3.3.0';
+	public $version = '3.3.1';
 
 	/**
 	 * The single instance of the class.
@@ -546,7 +546,7 @@ final class WooCommerce {
 		add_image_size( 'woocommerce_single', $single['width'], $single['height'], $single['crop'] );
 
 		// 2x thumbnail size for retina, and when showing less columns.
-		add_image_size( 'woocommerce_thumbnail_2x', $thumbnail['width'] * 2, $thumbnail['height'] * 2, $thumbnail['crop'] );
+		add_image_size( 'woocommerce_thumbnail_2x', $thumbnail['width'] * 2, '' !== $thumbnail['height'] ? $thumbnail['height'] * 2 : '', $thumbnail['crop'] );
 
 		// Registered for bw compat. @todo remove in 4.0.
 		add_image_size( 'shop_thumbnail', $thumbnail['width'], $thumbnail['height'], $thumbnail['crop'] );

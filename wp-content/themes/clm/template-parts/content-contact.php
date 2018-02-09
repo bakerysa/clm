@@ -27,7 +27,7 @@
     <p><?php the_field('helpdesk_info') ?></p>
     <p><strong>Email: </strong><a href="mailto:<?php the_field('helpdesk_email') ?>"><?php the_field('helpdesk_email') ?></a></p>
     <h4><?php the_field('order_online') ?></h4>
-    <p><a href="mailto:<?php the_field('online_address') ?>"><?php the_field('online_address') ?></a></p>
+    <p><a target="_blank" href="http://<?php the_field('online_address') ?>"><?php the_field('online_address') ?></a></p>
     <div class="redline left"></div>
   </div>
   <div class="col-md-6 col-md-offset-1 contact-regions">

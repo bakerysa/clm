@@ -131,7 +131,7 @@ a:hover,a:active{outline:0}
 .modal-title{position:relative;top:18px;left:20px}
 .modal-dialog{top:50%;-webkit-transform:translateY(-55%) !important;-ms-transform:translateY(-55%) !important;transform:translateY(-55%) !important;width:90% !important;max-width:1000px}
 .modal-content{border-radius:0 !important;box-shadow:none !important;-webkit-box-shadow:none !important;border:3px solid black !important}
-.menu-image img{padding:20px}
+.menu-image img{padding:20px;margin-top:3rem}
 .menu-custom ul li{list-style:none;list-style-type:none;overflow:hidden;margin-bottom:2em}
 .menu-custom ul li a{display:block;text-transform:uppercase;font-family:"din_condensedbold" !important;float:right;letter-spacing:8px;font-size:2em;position:relative;width:auto;text-align:right;-webkit-transition:all .2s ease-out;transition:all .2s ease-out}
 .menu-custom ul li a:before{content:"";position:absolute;height:5px;border-top:2px solid black;top:19px;left:-207%;width:0;overflow:hidden;-webkit-transition:all .2s ease-out;transition:all .2s ease-out}
@@ -139,7 +139,7 @@ a:hover,a:active{outline:0}
 .menu-custom ul li a:hover:before,.menu-custom ul li a:active:before,.menu-custom ul li a:focus:before{width:200%}
 .menu-custom ul li.current_page_item a,.menu-custom ul li:hover a{color:#c0392d}
 .menu-custom ul li.current_page_item a:before,.menu-custom ul li:hover a:before{content:"";position:absolute;height:5px;border-top:2px solid #c0392d;top:19px;left:-207%;width:200%;overflow:hidden}
-.menu-custom ul li .description{font-size:13px;float:right;text-align:right;margin-right:10px}
+.menu-custom ul li .description{font-size:13px !important;float:right !important;text-align:right !important;margin-right:10px !important}
 .menu-toggle{color:black;max-width:80px !important;max-height:40px !important}
 .menu-toggle[aria-expanded="false"]{position:relative;background:black !important;color:black !important}
 .menu-toggle[aria-expanded="false"]:before{color:white;content:"MENU";position:absolute;height:20px;top:11px;width:46px;font-size:1.4em}
@@ -172,7 +172,7 @@ footer .site-info .wine a:focus{text-decoration:none}
 .clearifx{clear:both}
 .widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
-.entry-title{text-align:center;font-size:100px;text-transform:uppercase;font-family:"din_condensedbold";color:#eee;letter-spacing:2rem}
+.entry-title{text-align:center;font-size:100px;text-transform:uppercase;font-family:"din_condensedbold";color:#eee;letter-spacing:2rem;margin-left:2rem}
 .page-title{text-align:center !important}
 .header-title{margin-left:4rem;margin-top:4rem;position:absolute;z-index:1000}
 .header-title:before{content:"";position:absolute;height:5px;border-top:2px solid #c0392d;top:12px;left:-105px;width:100px}
@@ -208,13 +208,13 @@ embed,iframe,object{max-width:100%}
 .gallery-columns-8 .gallery-item{max-width:12.5%}
 .gallery-columns-9 .gallery-item{max-width:11.11%}
 .gallery-caption{display:block}
-.menu-icon{position:absolute;right:20px;top:80px}
+.menu-icon{position:absolute;right:20px;top:72px}
 .menu-icon .fa{margin:0 !important;padding-left:2px;padding-bottom:2px;font-size:15px}
 .menu-icon .btn{padding:.8em 1.4em}
 .accounts{position:absolute;right:6rem;top:80px}
 .accounts a{margin-right:5px}
 .accounts .btn{padding:.7rem 1.4rem .7rem 1.4rem;border:2px solid black}
-.brand-filters{text-align:center !important}
+.brand-filters{text-align:center !important;max-width:550px;margin:0 auto !important}
 .brand-filters a{margin:5px}
 .brand-single-container{border-bottom:2px solid black}
 .brand-single-container .owl-nav{position:absolute;top:0;width:100%}
@@ -232,6 +232,7 @@ embed,iframe,object{max-width:100%}
 .pwb-single-product-brands{opacity:.4;pointer-events:none}
 .product_title{font-size:36px;letter-spacing:10px;color:black;text-align:left}
 .owl-carousel .owl-item img{max-height:310px !important;width:auto !important}
+.owl-nav .disabled{display:none}
 .brand-single-intro{text-align:right;padding-right:4rem}
 .woocommerce-page .header-title{opacity:.1}
 .woocommerce-page .site-branding a{opacity:.1}
@@ -264,7 +265,6 @@ embed,iframe,object{max-width:100%}
 .h-button-fix{display:inline-block}
 .woocommerce-product-gallery__image{padding-top:4rem}
 .woocommerce-ordering{display:none}
-.product-video{padding:1rem}
 .no-results{text-align:center}
 .cocktail{border:2px solid black;padding:2rem;margin:2rem auto}
 .cocktail span{font-weight:600}
@@ -275,7 +275,7 @@ embed,iframe,object{max-width:100%}
 .cocktail-item .cocktail-image-container .cocktail-image{width:300px;height:300px;margin:0 auto;background-position:center center;background-size:cover;background-repeat:no-repeat}
 .cocktail-item .cocktail-title{margin-top:1rem;position:relative;text-transform:capitalize !important;font-size:20px;font-family:"din_condensedbold";text-align:center}
 .cocktail-image{padding-top:2rem}
-.cocktail-image img{max-height:35rem !important;width:auto;display:block;margin:0 auto}
+.cocktail-image img{width:100%;display:block;margin:0 auto}
 .cocktail-filter i{display:inline-block}
 .fa{text-align:center;margin:1rem;font-size:22px}
 .fa:hover{color:#c0392d}
@@ -306,20 +306,23 @@ embed,iframe,object{max-width:100%}
 .searchandfilter ul>li{text-align:left;width:100%;display:inline-block;position:relative;padding:2rem}
 .searchandfilter ul>li>ul li{width:100%;display:block;padding:0}
 .searchandfilter ul>li input[type="submit"]{margin-bottom:2rem;position:fixed;bottom:0;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}
+.social-feeds{padding-left:3rem;padding-right:3rem}
 .news{padding-top:5rem}
 .news .news-title{font-family:"din_condensedbold";font-size:20px;text-transform:uppercase;text-align:center;padding:1rem}
 .news .news-image-container{width:100%;height:100%}
 .news .news-image-container .news-image{width:300px;height:300px;margin:0 auto;background-position:center center;background-size:cover;background-repeat:no-repeat}
-.news-item{min-height:450px}
+.news-item{min-height:450px;padding:0}
 .nav-links{display:none}
 .contact-regions{padding-top:4rem}
 .contact-cta{margin-top:6rem;padding-top:6rem}
 .h-max-height{max-height:40rem;margin:0 auto}
 .contact-item p{margin:0;font-size:14px}
-.age-gate-logo{max-width:12rem;margin:0 auto !important;display:block;padding-bottom:1rem !important;margin-top:3rem !important}
+.age-gate-logo{max-width:8rem;margin:0 auto !important;display:block;padding-bottom:1rem !important;margin-top:3rem !important}
 .age-gate-confirm-message{margin-bottom:2em}
 .age-gate-form button[name=confirm]{margin-bottom:2.8em}
 .age-gate-form{max-width:800px}
+.age-gate-additional-information p{font-size:11px !important;opacity:.6;line-height:18px;max-width:40rem;margin:0 auto !important}
+.fts-powered-by-text{display:none !important}
 @media screen and (min-width:37.5em){.menu-toggle{display:block}
 .main-navigation ul{display:none}
 }@media only screen and (max-width:991px){.tradezone{display:block}
@@ -351,14 +354,14 @@ footer .site-info .social-icons{right:auto;bottom:auto;color:white;position:rela
 .brand-single-container .owl-prev img{max-width:40px}
 .main-navigation{display:block}
 .menu-icon{display:none}
-.accounts{position:absolute;top:1.5rem;right:.7rem;text-align:center;padding-bottom:.5rem;width:40%}
+.accounts{position:absolute;top:1rem;right:.7rem;text-align:center;padding-bottom:.5rem;width:40%}
 .accounts a{white-space:nowrap}
 .accounts .btn{display:block;padding:.7rem .5rem}
 .accounts .btn-secondary{display:block;margin-bottom:.5rem;letter-spacing:.1rem}
-.main-navigation li{width:100%;text-align:left;border:2px solid black;padding:1em;margin:-2px 0 0 0}
+.main-navigation li{width:100%;text-align:left;border:2px solid black;margin:-2px 0 0 0}
 .main-navigation li.current-menu-item,.main-navigation li:hover{text-decoration:none;background:black;color:white !important}
 .main-navigation li.current-menu-item a,.main-navigation li:hover a{color:white !important}
-.main-navigation li a{text-decoration:none;display:block;font-size:1.7em}
+.main-navigation li a{text-decoration:none;display:block;font-size:1.7em;padding:.7em}
 .main-navigation li .description{text-decoration:none;display:block;font-size:12px;font-family:"Raleway",sans-serif;text-transform:none;letter-spacing:1px;line-height:18px}
 .modal,.modal-backdrop{display:none !important}
 .entry-title{display:none}

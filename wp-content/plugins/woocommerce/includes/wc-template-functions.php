@@ -151,10 +151,6 @@ add_action( 'the_post', 'wc_setup_product_data' );
  * @param array $args Args to pass into the global.
  */
 function wc_setup_loop( $args = array() ) {
-	if ( isset( $GLOBALS['woocommerce_loop'] ) ) {
-		return; // If the loop has already been setup, bail.
-	}
-
 	$default_args = array(
 		'loop'         => 0,
 		'columns'      => wc_get_default_products_per_row(),
@@ -181,6 +177,11 @@ function wc_setup_loop( $args = array() ) {
 		) );
 	}
 
+	// Merge any existing values.
+	if ( isset( $GLOBALS['woocommerce_loop'] ) ) {
+		$default_args = array_merge( $default_args, $GLOBALS['woocommerce_loop'] );
+	}
+
 	$GLOBALS['woocommerce_loop'] = wp_parse_args( $args, $default_args );
 }
 add_action( 'woocommerce_before_shop_loop', 'wc_setup_loop' );
@@ -204,6 +205,8 @@ add_action( 'woocommerce_after_shop_loop', 'woocommerce_reset_loop', 999 );
  * @return mixed
  */
 function wc_get_loop_prop( $prop, $default = '' ) {
+	wc_setup_loop(); // Ensure shop loop is setup.
+
 	return isset( $GLOBALS['woocommerce_loop'], $GLOBALS['woocommerce_loop'][ $prop ] ) ? $GLOBALS['woocommerce_loop'][ $prop ] : $default;
 }
 
@@ -306,7 +309,7 @@ function wc_product_cat_class( $class = '', $category = null ) {
  * @return int
  */
 function wc_get_default_products_per_row() {
-	$columns      = get_option( 'woocommerce_catalog_columns', 3 );
+	$columns      = get_option( 'woocommerce_catalog_columns', 4 );
 	$product_grid = wc_get_theme_support( 'product_grid' );
 	$min_columns  = isset( $product_grid['min_columns'] ) ? absint( $product_grid['min_columns'] ) : 0;
 	$max_columns  = isset( $product_grid['max_columns'] ) ? absint( $product_grid['max_columns'] ) : 0;
@@ -323,7 +326,9 @@ function wc_get_default_products_per_row() {
 		$columns = apply_filters( 'loop_shop_columns', $columns );
 	}
 
-	return absint( $columns );
+	$columns = absint( $columns );
+
+	return max( 1, $columns );
 }
 
 /**
@@ -567,10 +572,12 @@ if ( ! function_exists( 'woocommerce_content' ) ) {
 
 				<?php woocommerce_product_loop_start(); ?>
 
-				<?php while ( have_posts() ) : ?>
-					<?php the_post(); ?>
-					<?php wc_get_template_part( 'content', 'product' ); ?>
-				<?php endwhile; // end of the loop. ?>
+				<?php if ( wc_get_loop_prop( 'total' ) ) : ?>
+					<?php while ( have_posts() ) : ?>
+						<?php the_post(); ?>
+						<?php wc_get_template_part( 'content', 'product' ); ?>
+					<?php endwhile; ?>
+				<?php endif; ?>
 
 				<?php woocommerce_product_loop_end(); ?>
 
@@ -1816,17 +1823,115 @@ if ( ! function_exists( 'woocommerce_maybe_show_product_subcategories' ) ) {
 		// If displaying categories, append to the loop.
 		if ( 'subcategories' === $display_type || 'both' === $display_type ) {
 			ob_start();
-			woocommerce_product_subcategories( array(
+			woocommerce_output_product_categories( array(
 				'parent_id' => is_product_category() ? get_queried_object_id() : 0,
 			) );
 			$loop_html .= ob_get_clean();
 
 			if ( 'subcategories' === $display_type ) {
 				wc_set_loop_prop( 'total', 0 );
+
+				// This removes pagination and products from display for themes not using wc_get_loop_prop in their product loops.  @todo Remove in future major version.
+				global $wp_query;
+
+				if ( $wp_query->is_main_query() ) {
+					$wp_query->post_count    = 0;
+					$wp_query->max_num_pages = 0;
+				}
 			}
 		}
 
 		return $loop_html;
+	}
+}
+
+if ( ! function_exists( 'woocommerce_product_subcategories' ) ) {
+	/**
+	 * This is a legacy function which used to check if we needed to display subcats and then output them. It was called by templates.
+	 *
+	 * From 3.3 onwards this is all handled via hooks and the woocommerce_maybe_show_product_subcategories function.
+	 *
+	 * Since some templates have not updated compatibility, to avoid showing incorrect categories this function has been deprecated and will
+	 * return nothing. Replace usage with woocommerce_output_product_categories to render the category list manually.
+	 *
+	 * This is a legacy function which also checks if things should display.
+	 * Themes no longer need to call these functions. It's all done via hooks.
+	 *
+	 * @deprecated 3.3.1 @todo Add a notice in a future version.
+	 * @param array $args Arguments.
+	 * @return null|boolean
+	 */
+	function woocommerce_product_subcategories( $args = array() ) {
+		$defaults = array(
+			'before'        => '',
+			'after'         => '',
+			'force_display' => false,
+		);
+
+		$args = wp_parse_args( $args, $defaults );
+
+		if ( $args['force_display'] ) {
+			// We can still render if display is forced.
+			woocommerce_output_product_categories( array(
+				'before'    => $args['before'],
+				'after'     => $args['after'],
+				'parent_id' => is_product_category() ? get_queried_object_id() : 0,
+			) );
+			return true;
+		} else {
+			// Output nothing. woocommerce_maybe_show_product_subcategories will handle the output of cats.
+			$display_type = woocommerce_get_loop_display_mode();
+
+			if ( 'subcategories' === $display_type ) {
+				// This removes pagination and products from display for themes not using wc_get_loop_prop in their product loops. @todo Remove in future major version.
+				global $wp_query;
+
+				if ( $wp_query->is_main_query() ) {
+					$wp_query->post_count    = 0;
+					$wp_query->max_num_pages = 0;
+				}
+			}
+
+			return 'subcategories' === $display_type || 'both' === $display_type;
+		}
+	}
+}
+
+if ( ! function_exists( 'woocommerce_output_product_categories' ) ) {
+	/**
+	 * Display product sub categories as thumbnails.
+	 *
+	 * This is a replacement for woocommerce_product_subcategories which also does some logic
+	 * based on the loop. This function however just outputs when called.
+	 *
+	 * @since 3.3.1
+	 * @param array $args Arguments.
+	 * @return boolean
+	 */
+	function woocommerce_output_product_categories( $args = array() ) {
+		$args = wp_parse_args( $args, array(
+			'before'    => '',
+			'after'     => '',
+			'parent_id' => 0,
+		) );
+
+		$product_categories = woocommerce_get_product_subcategories( $args['parent_id'] );
+
+		if ( ! $product_categories ) {
+			return false;
+		}
+
+		echo $args['before']; // WPCS: XSS ok.
+
+		foreach ( $product_categories as $category ) {
+			wc_get_template( 'content-product_cat.php', array(
+				'category' => $category,
+			) );
+		}
+
+		echo $args['after']; // WPCS: XSS ok.
+
+		return true;
 	}
 }
 
@@ -1859,40 +1964,6 @@ if ( ! function_exists( 'woocommerce_get_product_subcategories' ) ) {
 		}
 
 		return $product_categories;
-	}
-}
-
-if ( ! function_exists( 'woocommerce_product_subcategories' ) ) {
-	/**
-	 * Display product sub categories as thumbnails.
-	 *
-	 * @param array $args Arguments.
-	 * @return boolean
-	 */
-	function woocommerce_product_subcategories( $args = array() ) {
-		$args = wp_parse_args( $args, array(
-			'before'    => '',
-			'after'     => '',
-			'parent_id' => 0,
-		) );
-
-		$product_categories = woocommerce_get_product_subcategories( $args['parent_id'] );
-
-		if ( ! $product_categories ) {
-			return false;
-		}
-
-		echo $args['before']; // WPCS: XSS ok.
-
-		foreach ( $product_categories as $category ) {
-			wc_get_template( 'content-product_cat.php', array(
-				'category' => $category,
-			) );
-		}
-
-		echo $args['after']; // WPCS: XSS ok.
-
-		return true;
 	}
 }
 

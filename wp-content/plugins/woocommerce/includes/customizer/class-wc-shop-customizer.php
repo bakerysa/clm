@@ -154,8 +154,10 @@ class WC_Shop_Customizer {
 
 				wp.customize( 'woocommerce_catalog_rows', function( setting ) {
 					setting.bind( function( value ) {
-						var min = '<?php echo esc_js( $min_rows ); ?>';
-						var max = '<?php echo esc_js( $max_rows ); ?>';
+						var min = parseInt( '<?php echo esc_js( $min_rows ); ?>', 10 );
+						var max = parseInt( '<?php echo esc_js( $max_rows ); ?>', 10 );
+						
+						value = parseInt( value, 10 );
 
 						if ( max && value > max ) {
 							setting.notifications.add( 'max_rows_error', new wp.customize.Notification(
@@ -357,7 +359,7 @@ class WC_Shop_Customizer {
 			'woocommerce_default_catalog_orderby',
 			array(
 				'label'       => __( 'Default product sorting', 'woocommerce' ),
-				'description' => __( 'How should products by sorted in the catalog by default?', 'woocommerce' ),
+				'description' => __( 'How should products be sorted in the catalog by default?', 'woocommerce' ),
 				'section'     => 'woocommerce_product_catalog',
 				'settings'    => 'woocommerce_default_catalog_orderby',
 				'type'        => 'select',
@@ -380,7 +382,7 @@ class WC_Shop_Customizer {
 		$wp_customize->add_setting(
 			'woocommerce_catalog_columns',
 			array(
-				'default'              => 3,
+				'default'              => 4,
 				'type'                 => 'option',
 				'capability'           => 'manage_woocommerce',
 				'sanitize_callback'    => 'absint',
@@ -404,16 +406,19 @@ class WC_Shop_Customizer {
 			)
 		);
 
-		$wp_customize->add_setting(
-			'woocommerce_catalog_rows',
-			array(
-				'default'              => 4,
-				'type'                 => 'option',
-				'capability'           => 'manage_woocommerce',
-				'sanitize_callback'    => 'absint',
-				'sanitize_js_callback' => 'absint',
-			)
-		);
+		// Only add this setting if something else isn't managing the number of products per page.
+		if ( ! has_filter( 'loop_shop_per_page' ) ) {
+			$wp_customize->add_setting(
+				'woocommerce_catalog_rows',
+				array(
+					'default'              => 4,
+					'type'                 => 'option',
+					'capability'           => 'manage_woocommerce',
+					'sanitize_callback'    => 'absint',
+					'sanitize_js_callback' => 'absint',
+				)
+			);
+		}
 
 		$wp_customize->add_control(
 			'woocommerce_catalog_rows',

@@ -44,10 +44,10 @@
 		</div><!-- .site-branding -->
 
 		<div class="accounts">
-			<a target"_blank" href="https://form.myjotform.com/73382290037556" class="btn-secondary" data-toggle="modal">
+			<a target="_blank" href="https://form.myjotform.com/73382290037556" class="btn-secondary" data-toggle="modal">
 				Open An Account
 			</a>
-			<a target"_blank" href="https://coolwinestradezone.co.za/B2B/CatalogueFlow.Login.aspx?OriginalURL=https%3a%2f%2fcoolwinestradezone.co.za%2fSettingsCore%2fProducts.aspx" class="btn" data-toggle="modal">
+			<a target="_blank" href="https://coolwinestradezone.co.za/" class="btn-secondary" data-toggle="modal">
 				Place An Order
 			</a>
 		</div>
@@ -60,8 +60,8 @@
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'clm' ); ?></button>
 			<?php
 				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
+					'theme_location' => 'menu-2',
+					'menu_id'        => 'mobile-menu',
 				) );
 			?>
 		</nav><!-- #site-navigation -->
@@ -80,13 +80,13 @@
       </div>
       <div class="modal-body">
 				<div class="row">
-					<div class="col-md-4 col-md-offset-1 menu-image">
+					<div class="col-md-4 col-md-inset-1 menu-image">
 
 								<img src="<?php the_field('menu_image', 'option'); ?>" />
 
 
 					</div>
-					<div class="col-md-6 menu-custom">
+					<div class="col-md-7 menu-custom">
 						<?php
 							wp_nav_menu( array(
 								'theme_location' => 'menu-1',

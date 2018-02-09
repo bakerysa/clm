@@ -578,6 +578,7 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+
 .main-navigation {
 	clear: both;
 	display: none;
@@ -734,6 +735,7 @@ a:hover, a:active {
 .menu-image {
 	img {
 		padding: 20px;
+		margin-top: 3rem;
 	}
 }
 .menu-custom {
@@ -795,10 +797,10 @@ a:hover, a:active {
 				}
 			}
 			.description {
-				font-size: 13px;
-				float:right;
-				text-align: right;
-    		margin-right: 10px;
+				font-size: 13px !important;
+				float: right !important;
+				text-align: right !important;
+				margin-right: 10px !important;
 			}
 		}
 	}
@@ -1075,6 +1077,7 @@ footer {
 	font-family: $font-din;
 	color: $color-grey-light;
 	letter-spacing: 2rem;
+  margin-left: 2rem;
 }
 
 .page-title {
@@ -1271,7 +1274,7 @@ object {
 .menu-icon {
 	position: absolute;
 	right: 20px;
-	top: 80px;
+	top: 72px;
 	.fa {
 		margin: 0 !important;
 		padding-left: 2px;
@@ -1298,6 +1301,8 @@ object {
 
 .brand-filters {
 	text-align: center!important;
+	max-width: 550px;
+  margin: 0 auto !important;
 	a {
 		margin: 5px;
 	}
@@ -1386,6 +1391,10 @@ object {
 				width: auto!important;
 			}
 		}
+	}
+
+	.owl-nav .disabled {
+	  display: none;
 	}
 
 
@@ -1543,10 +1552,6 @@ object {
 	display: none;
 }
 
-.product-video {
-	padding: 1rem;
-}
-
 /*--------------------------------------------------------------
 ## Cocktails
 --------------------------------------------------------------*/
@@ -1615,8 +1620,7 @@ object {
 	.cocktail-image {
 		padding-top: 2rem;
 		img {
-			max-height: 35rem !important;
-			width: auto;
+			width: 100%;
 			display: block;
 			margin: 0 auto;
 		}
@@ -1809,6 +1813,11 @@ object {
 	}
 }
 
+.social-feeds {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
 .news {
 	padding-top: 5rem;
 	.news-title {
@@ -1834,6 +1843,7 @@ object {
 
 .news-item {
 	min-height: 450px;
+	padding: 0;
 }
 
 .nav-links {
@@ -1865,7 +1875,7 @@ object {
 // Age-Gate
 
 .age-gate-logo {
-	max-width: 12rem;
+	max-width: 8rem;
 	margin: 0 auto !important;
 	display: block;
 	padding-bottom: 1rem !important;
@@ -1882,6 +1892,20 @@ object {
 
 .age-gate-form {
 	max-width: 800px;
+}
+
+.age-gate-additional-information {
+	p {
+		font-size: 11px !important;
+		opacity: 0.6;
+		line-height: 18px;
+		max-width: 40rem;
+		margin: 0 auto !important;
+	}
+}
+
+.fts-powered-by-text {
+	display: none !important;
 }
 
 @import "_responsive.scss";

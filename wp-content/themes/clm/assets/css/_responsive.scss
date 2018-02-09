@@ -7,7 +7,7 @@
   .site-branding {
     max-width: 6rem;
     margin: 0.5rem;
-    margin-top: -1rem;
+    margin-top: 1rem;
     margin-left: 1rem;
   }
 
@@ -159,7 +159,7 @@
 
   .accounts {
     position: absolute;
-    top: 1.5rem;
+    top: 1rem;
     right: 0.7rem;
     text-align: center;
     padding-bottom: 0.5rem;
@@ -183,7 +183,6 @@
     width: 100%;
     text-align: left;
     border: 2px solid black;
-    padding: 1em;
     margin: -2px 0 0 0 ;
     &.current-menu-item, &:hover {
       text-decoration: none;
@@ -197,6 +196,7 @@
         text-decoration: none;
         display: block;
         font-size: 1.7em;
+        padding: 0.7em;
       }
       .description {
         text-decoration: none;

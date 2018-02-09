@@ -1,0 +1,370 @@
+2017-11-05T19:52:40+00:00 CRITICAL Uncaught Error: Call to undefined function get_product_cat() in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:45
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T19:52:41+00:00 CRITICAL Uncaught Error: Call to undefined function get_product_cat() in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:45
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T19:52:50+00:00 CRITICAL Uncaught Error: Call to undefined function product_cat() in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:45
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T19:52:51+00:00 CRITICAL Uncaught Error: Call to undefined function product_cat() in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:45
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T19:55:26+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function _n(), 2 passed in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php on line 53 and at least 3 expected in /Applications/MAMP/sites/clm/wp-includes/l10n.php:361
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php(53): _n(1, 'woocommerce')
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require('/Applications/M...')
+#2 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#3 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#4 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#5 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#7 /Applications/MAMP/
+
+2017-11-05T19:55:37+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function _n(), 2 passed in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php on line 53 and at least 3 expected in /Applications/MAMP/sites/clm/wp-includes/l10n.php:361
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php(53): _n(1, 'woocommerce')
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require('/Applications/M...')
+#2 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#3 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#4 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#5 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#7 /Applications/MAMP/
+
+2017-11-05T19:57:35+00:00 CRITICAL Uncaught Error: Call to a member function get_categories() on null in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:35
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T19:57:44+00:00 CRITICAL Uncaught Error: Call to undefined function product_cat() in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:56
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T19:57:50+00:00 CRITICAL Uncaught Error: Call to undefined function product_cat() in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:53
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T19:58:01+00:00 CRITICAL Uncaught Error: Call to undefined function product_cat() in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:53
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T19:58:33+00:00 CRITICAL Uncaught Error: Call to a member function get_categories() on null in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:35
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T19:58:58+00:00 CRITICAL Uncaught Error: Call to a member function get_categories() on null in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:43
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T19:59:12+00:00 CRITICAL Uncaught Error: Call to a member function get_categories() on null in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:35
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T19:59:45+00:00 CRITICAL Uncaught Error: Call to a member function get_categories() on null in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:46
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T20:00:10+00:00 CRITICAL Uncaught Error: Call to a member function get_categories() on null in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:46
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T20:03:21+00:00 CRITICAL Uncaught Error: Call to a member function get_categories() on null in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:56
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T20:03:24+00:00 CRITICAL Uncaught Error: Call to a member function get_categories() on null in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:56
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T20:03:43+00:00 CRITICAL Uncaught Error: Call to a member function get_categories() on null in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:57
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T20:03:49+00:00 CRITICAL Uncaught Error: Call to a member function get_categories() on null in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:56
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T20:04:42+00:00 CRITICAL Uncaught Error: Call to a member function get_categories() on null in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:54
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T20:04:53+00:00 CRITICAL Uncaught Error: Call to a member function get_categories() on null in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:54
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-05T20:05:22+00:00 CRITICAL Uncaught Error: Call to a member function get_categories() on null in /Applications/MAMP/sites/clm/wp-content/themes/clm/template-parts/content-brands.php:59
+Stack trace:
+#0 /Applications/MAMP/sites/clm/wp-includes/template.php(690): require()
+#1 /Applications/MAMP/sites/clm/wp-includes/template.php(647): load_template('/Applications/M...', false)
+#2 /Applications/MAMP/sites/clm/wp-includes/general-template.php(167): locate_template(Array, true, false)
+#3 /Applications/MAMP/sites/clm/wp-content/themes/clm/page-brands.php(18): get_template_part('template-parts/...', 'brands')
+#4 /Applications/MAMP/sites/clm/wp-includes/template-loader.php(74): include('/Applications/M...')
+#5 /Applications/MAMP/sites/clm/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/sites/clm/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown
+
+2017-11-07T13:32:40+00:00 CRITICAL Uncaught Error: Call to undefined function mb_detect_encoding() in /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-exporter.php:356
+Stack trace:
+#0 /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-exporter.php(271): WC_CSV_Exporter->format_data('152')
+#1 [internal function]: WC_CSV_Exporter->export_row(Array, 0, Resource id #569)
+#2 /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-exporter.php(251): array_walk(Array, Array, Resource id #569)
+#3 /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-exporter.php(203): WC_CSV_Exporter->export_rows()
+#4 /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-batch-exporter.php(90): WC_CSV_Exporter->get_csv_data()
+#5 /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/admin/class-wc-admin-exporters.php(134): WC_CSV_Batch_Exporter->gene
+
+2017-11-07T13:37:20+00:00 CRITICAL Uncaught Error: Call to undefined function mb_detect_encoding() in /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-exporter.php:356
+Stack trace:
+#0 /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-exporter.php(271): WC_CSV_Exporter->format_data('152')
+#1 [internal function]: WC_CSV_Exporter->export_row(Array, 0, Resource id #569)
+#2 /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-exporter.php(251): array_walk(Array, Array, Resource id #569)
+#3 /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-exporter.php(203): WC_CSV_Exporter->export_rows()
+#4 /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-batch-exporter.php(90): WC_CSV_Exporter->get_csv_data()
+#5 /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/admin/class-wc-admin-exporters.php(134): WC_CSV_Batch_Exporter->gene
+
+2017-11-07T13:37:35+00:00 CRITICAL Uncaught Error: Call to undefined function mb_detect_encoding() in /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-exporter.php:356
+Stack trace:
+#0 /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-exporter.php(271): WC_CSV_Exporter->format_data('152')
+#1 [internal function]: WC_CSV_Exporter->export_row(Array, 0, Resource id #569)
+#2 /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-exporter.php(251): array_walk(Array, Array, Resource id #569)
+#3 /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-exporter.php(203): WC_CSV_Exporter->export_rows()
+#4 /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-batch-exporter.php(90): WC_CSV_Exporter->get_csv_data()
+#5 /home/bakeryco/public_html/clm/wp-content/plugins/woocommerce/includes/admin/class-wc-admin-exporters.php(134): WC_CSV_Batch_Exporter->gene
+
+2017-11-29T13:41:44+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function query_posts(), 0 passed in /Users/b_b0t/Sites/bakery/clm/wp-content/themes/clm/template-parts/content-events.php on line 21 and exactly 1 expected in /Users/b_b0t/Sites/bakery/clm/wp-includes/query.php:96
+Stack trace:
+#0 /Users/b_b0t/Sites/bakery/clm/wp-content/themes/clm/template-parts/content-events.php(21): query_posts()
+#1 /Users/b_b0t/Sites/bakery/clm/wp-includes/template.php(690): require('/Users/b_b0t/Si...')
+#2 /Users/b_b0t/Sites/bakery/clm/wp-includes/template.php(647): load_template('/Users/b_b0t/Si...', false)
+#3 /Users/b_b0t/Sites/bakery/clm/wp-includes/general-template.php(155): locate_template(Array, true, false)
+#4 /Users/b_b0t/Sites/bakery/clm/wp-content/themes/clm/page-buzz.php(19): get_template_part('template-parts/...', 'events')
+#5 /Users/b_b0t/Sites/bakery/clm/wp-includes/template-loader.php(74): include('/Users/b_b0t/Si...')
+#6 /Users/b_b0t/Sites/bakery/clm/wp-blog-header.php(19): require_once('/Users/b_b0t/Si...')
+#7 /Users/b_b0
+
+2017-11-29T13:41:45+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function query_posts(), 0 passed in /Users/b_b0t/Sites/bakery/clm/wp-content/themes/clm/template-parts/content-events.php on line 21 and exactly 1 expected in /Users/b_b0t/Sites/bakery/clm/wp-includes/query.php:96
+Stack trace:
+#0 /Users/b_b0t/Sites/bakery/clm/wp-content/themes/clm/template-parts/content-events.php(21): query_posts()
+#1 /Users/b_b0t/Sites/bakery/clm/wp-includes/template.php(690): require('/Users/b_b0t/Si...')
+#2 /Users/b_b0t/Sites/bakery/clm/wp-includes/template.php(647): load_template('/Users/b_b0t/Si...', false)
+#3 /Users/b_b0t/Sites/bakery/clm/wp-includes/general-template.php(155): locate_template(Array, true, false)
+#4 /Users/b_b0t/Sites/bakery/clm/wp-content/themes/clm/page-buzz.php(19): get_template_part('template-parts/...', 'events')
+#5 /Users/b_b0t/Sites/bakery/clm/wp-includes/template-loader.php(74): include('/Users/b_b0t/Si...')
+#6 /Users/b_b0t/Sites/bakery/clm/wp-blog-header.php(19): require_once('/Users/b_b0t/Si...')
+#7 /Users/b_b0
+
+2017-11-30T07:36:08+00:00 CRITICAL Maximum execution time of 30 seconds exceeded
+
+2017-12-05T12:58:15+00:00 CRITICAL Uncaught Error: Call to undefined function get_template_directory_url() in /Users/b_b0t/Sites/bakery/clm/wp-content/themes/clm/woocommerce/content-single-product.php:26
+Stack trace:
+#0 /Users/b_b0t/Sites/bakery/clm/wp-includes/template.php(690): require()
+#1 /Users/b_b0t/Sites/bakery/clm/wp-content/plugins/woocommerce/includes/wc-core-functions.php(179): load_template('/Users/b_b0t/Si...', false)
+#2 /Users/b_b0t/Sites/bakery/clm/wp-content/plugins/woocommerce/templates/single-product.php(37): wc_get_template_part('content', 'single-product')
+#3 /Users/b_b0t/Sites/bakery/clm/wp-includes/template-loader.php(74): include('/Users/b_b0t/Si...')
+#4 /Users/b_b0t/Sites/bakery/clm/wp-blog-header.php(19): require_once('/Users/b_b0t/Si...')
+#5 /Users/b_b0t/Sites/bakery/clm/index.php(17): require('/Users/b_b0t/Si...')
+#6 {main}
+  thrown
+
+2018-01-31T11:19:38+00:00 CRITICAL Uncaught Error: Call to undefined function open_line_communications_entry_footer() in /Users/b_b0t/Sites/bakery/clm/wp-content/themes/clm/template-parts/content.php:52
+Stack trace:
+#0 /Users/b_b0t/Sites/bakery/clm/wp-includes/template.php(690): require()
+#1 /Users/b_b0t/Sites/bakery/clm/wp-includes/template.php(647): load_template('/Users/b_b0t/Si...', false)
+#2 /Users/b_b0t/Sites/bakery/clm/wp-includes/general-template.php(155): locate_template(Array, true, false)
+#3 /Users/b_b0t/Sites/bakery/clm/wp-content/themes/clm/single.php(18): get_template_part('template-parts/...', 'product')
+#4 /Users/b_b0t/Sites/bakery/clm/wp-includes/template-loader.php(74): include('/Users/b_b0t/Si...')
+#5 /Users/b_b0t/Sites/bakery/clm/wp-blog-header.php(19): require_once('/Users/b_b0t/Si...')
+#6 /Users/b_b0t/Sites/bakery/clm/index.php(17): require('/Users/b_b0t/Si...')
+#7 {main}
+  thrown
+
+2018-01-31T11:19:45+00:00 CRITICAL Uncaught Error: Call to undefined function open_line_communications_entry_footer() in /Users/b_b0t/Sites/bakery/clm/wp-content/themes/clm/template-parts/content.php:52
+Stack trace:
+#0 /Users/b_b0t/Sites/bakery/clm/wp-includes/template.php(690): require()
+#1 /Users/b_b0t/Sites/bakery/clm/wp-includes/template.php(647): load_template('/Users/b_b0t/Si...', false)
+#2 /Users/b_b0t/Sites/bakery/clm/wp-includes/general-template.php(155): locate_template(Array, true, false)
+#3 /Users/b_b0t/Sites/bakery/clm/wp-content/themes/clm/single.php(18): get_template_part('template-parts/...', 'product')
+#4 /Users/b_b0t/Sites/bakery/clm/wp-includes/template-loader.php(74): include('/Users/b_b0t/Si...')
+#5 /Users/b_b0t/Sites/bakery/clm/wp-blog-header.php(19): require_once('/Users/b_b0t/Si...')
+#6 /Users/b_b0t/Sites/bakery/clm/index.php(17): require('/Users/b_b0t/Si...')
+#7 {main}
+  thrown
+
+2018-01-31T11:19:47+00:00 CRITICAL Uncaught Error: Call to undefined function open_line_communications_entry_footer() in /Users/b_b0t/Sites/bakery/clm/wp-content/themes/clm/template-parts/content.php:52
+Stack trace:
+#0 /Users/b_b0t/Sites/bakery/clm/wp-includes/template.php(690): require()
+#1 /Users/b_b0t/Sites/bakery/clm/wp-includes/template.php(647): load_template('/Users/b_b0t/Si...', false)
+#2 /Users/b_b0t/Sites/bakery/clm/wp-includes/general-template.php(155): locate_template(Array, true, false)
+#3 /Users/b_b0t/Sites/bakery/clm/wp-content/themes/clm/single.php(18): get_template_part('template-parts/...', 'product')
+#4 /Users/b_b0t/Sites/bakery/clm/wp-includes/template-loader.php(74): include('/Users/b_b0t/Si...')
+#5 /Users/b_b0t/Sites/bakery/clm/wp-blog-header.php(19): require_once('/Users/b_b0t/Si...')
+#6 /Users/b_b0t/Sites/bakery/clm/index.php(17): require('/Users/b_b0t/Si...')
+#7 {main}
+  thrown
+
+2018-02-07T07:09:27+00:00 CRITICAL Uncaught Error: Call to undefined function request_filesystem_credentials() in /Users/b_b0t/Sites/bakery/clm/wp-admin/includes/class-wp-upgrader-skin.php:93
+Stack trace:
+#0 /Users/b_b0t/Sites/bakery/clm/wp-admin/includes/class-automatic-upgrader-skin.php(47): WP_Upgrader_Skin->request_filesystem_credentials(false, '/Users/b_b0t/Si...', true)
+#1 /Users/b_b0t/Sites/bakery/clm/wp-admin/includes/class-wp-automatic-updater.php(144): Automatic_Upgrader_Skin->request_filesystem_credentials(false, '/Users/b_b0t/Si...', true)
+#2 /Users/b_b0t/Sites/bakery/clm/wp-admin/includes/update.php(85): WP_Automatic_Updater->should_update('core', Object(stdClass), '/Users/b_b0t/Si...')
+#3 /Users/b_b0t/Sites/bakery/clm/wp-includes/update.php(215): find_core_auto_update()
+#4 /Users/b_b0t/Sites/bakery/clm/wp-includes/class-wp-hook.php(286): wp_version_check()
+#5 /Users/b_b0t/Sites/bakery/clm/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#6 /Users/b_b0t/Sites/bakery/clm/wp-includes/plugin.php(515): WP_Hook->do
+

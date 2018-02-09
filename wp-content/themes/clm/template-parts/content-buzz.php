@@ -15,17 +15,9 @@
     <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
   </header><!-- .entry-header -->
 
-  <div class="col-md-12">
-    <h2><?php the_field('social_header') ?></h2>
-    <p><?php the_field('social_description') ?></p>
-    <!-- <div class="social-icons">
-      <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-      <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-      <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-    </div> -->
+  <div class="social-feeds">
+      <?php the_content(); ?>
   </div>
-
-  <?php the_content(); ?>
 
   <div class="col-md-12 news">
     <h2 style="text-align: center; padding-bottom: 2rem;">News and Events</h2>

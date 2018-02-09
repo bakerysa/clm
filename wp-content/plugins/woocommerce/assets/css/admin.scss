@@ -903,8 +903,7 @@ ul.wc_coupon_list {
 		&.code {
 			display: inline-block;
 			position: relative;
-			padding-right: 2em;
-			padding-left: .5em;
+			padding: 0 .5em;
 			background-color: #fff;
 			border: 1px solid #aaa;
 			-webkit-box-shadow: 0 1px 0 #dfdfdf;
@@ -913,6 +912,10 @@ ul.wc_coupon_list {
 			border-radius: 4px;
 			margin-right: 5px;
 			margin-top: 5px;
+
+			&.editable {
+				padding-right: 2em;
+			}
 
 			.tips {
 				cursor: pointer;
@@ -1976,6 +1979,7 @@ ul.wc_coupon_list_block {
 		}
 
 		a.link::after {
+			font-family: 'WooCommerce';
 			content: '\e00d';
 		}
 
@@ -2044,8 +2048,11 @@ ul.wc_coupon_list_block {
 		tbody tr {
 			border-top: 1px solid #f5f5f5;
 		}
-		tbody tr:hover:not(.status-trash) td {
+		tbody tr:hover:not(.status-trash):not(.no-link) td {
 			cursor: pointer;
+		}
+		.no-link {
+			cursor: default !important;
 		}
 
 		// Columns.
@@ -2068,7 +2075,7 @@ ul.wc_coupon_list_block {
 			}
 		}
 		.column-order_number {
-			width: 35ch;
+			width: 20ch;
 		}
 		.column-order_total {
 			width: 8ch;
@@ -2442,6 +2449,7 @@ table.wp-list-table {
 
 	.column-handle {
 		width: 17px;
+		display: none;
 	}
 
 	tbody {
