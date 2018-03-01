@@ -79,7 +79,7 @@ echo '<a href="' . $siteURL . '/the-brands' . '" ><img class="close-product" dat
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 		?>
-		<a target="_blank" class="btn-secondary btn-lg h-button-fix" href="<?php the_field('website_url'); ?>">Visit Website</a>
+		<a target="_blank" class="btn-secondary btn-lg h-button-fix website-button" href="<?php the_field('website_url'); ?>">Visit Website</a>
 		<?php
 		$link = get_field('website_url');
 		$searchAux = get_the_title();

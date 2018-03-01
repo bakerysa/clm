@@ -189,7 +189,7 @@ function create_post_type() {
       'public' => true,
 			'menu_icon'   => 'dashicons-palmtree',
 			'supports' => array( 'title', 'editor', 'thumbnail', 'cat' ),
-			'taxonomies' => array( 'category', 'tags' ),
+			'taxonomies' => array( 'category' ),
     )
   );
 
@@ -270,10 +270,8 @@ function organicweb_exclude_category( $terms, $taxonomies, $args ) {
   return $terms;
 }
 
-add_action( 'after_setup_theme', 'bbloomer_remove_zoom_lightbox_theme_support', 99 );
+add_action( 'after_setup_theme', 'remove_pgz_theme_support', 100 );
 
-function bbloomer_remove_zoom_lightbox_theme_support() {
+function remove_pgz_theme_support() {
 remove_theme_support( 'wc-product-gallery-zoom' );
-remove_theme_support( 'wc-product-gallery-lightbox' );
-remove_theme_support( 'wc-product-gallery-slider' );
 }

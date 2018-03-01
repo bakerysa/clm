@@ -86,7 +86,7 @@
     <div class="h-mobile-fix mt-50 mw-500 col-md-7 col-md-offset-4" style="text-align:right;">
       <h2><?php the_field('work_header') ?></h2>
       <p><?php the_field('work_description') ?></p>
-      <a href="http://clm.bakery.co.za/contact-us/"><input type="button" value="Contact Us"></a>
+      <a href="<?php echo esc_url( home_url( 'contact-us' ) ); ?>"><input type="button" value="Contact Us"></a>
     </div>
     <div class="clearifx">
     </div>

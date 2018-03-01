@@ -52,13 +52,15 @@ echo '<a href="' . $siteURL . '/cocktails' . '" ><img class="close-cocktail" dat
 	  </div>
 	</div>
 
-	<div class="col-md-12">
-		<div class="embed-responsive embed-responsive-16by9" style="margin-top: 2rem;">
-		  <video id='video-player' class="product-video" autoplay="autoplay" loop preload="metadata">
-		    <source src="<?php the_field('cocktail_video') ?>" type="video/mp4">
-		  </video>
+	<?php if( get_field('cocktail_video') ): ?>
+		<div class="col-md-12">
+			<div class="embed-responsive embed-responsive-16by9" style="margin-top: 2rem;">
+			  <video id='video-player' class="product-video" autoplay="autoplay" loop preload="metadata">
+			    <source src="<?php the_field('cocktail_video') ?>" type="video/mp4">
+			  </video>
+			</div>
 		</div>
-	</div>
+	<?php endif; ?>
 </div>
 
 		</main><!-- #main -->

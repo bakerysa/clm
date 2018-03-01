@@ -183,6 +183,7 @@ footer .site-info .wine a:focus{text-decoration:none}
 .entry-summary{width:55% !important;padding-right:9rem !important}
 .woocommerce-product-gallery{width:45% !important;padding-left:8rem !important}
 .page-links{clear:both;margin:0 0 1.5em}
+.woocommerce div.product div.images .woocommerce-product-gallery__wrapper .zoomImg{display:none !important}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
@@ -248,6 +249,7 @@ embed,iframe,object{max-width:100%}
 .related h4{margin-bottom:50px}
 .related .products img{width:auto !important;max-height:200px !important;margin:10px auto !important}
 .related .products .button{display:none}
+.website-button{margin:2rem 0}
 .left{float:left}
 .right{float:right}
 .text-left{float:left;text-align:left}
@@ -314,7 +316,7 @@ embed,iframe,object{max-width:100%}
 .news-item{min-height:450px;padding:0}
 .nav-links{display:none}
 .contact-regions{padding-top:4rem}
-.contact-cta{margin-top:6rem;padding-top:6rem}
+.contact-cta{margin-top:3rem;padding-top:3rem}
 .h-max-height{max-height:40rem;margin:0 auto}
 .contact-item p{margin:0;font-size:14px}
 .age-gate-logo{max-width:8rem;margin:0 auto !important;display:block;padding-bottom:1rem !important;margin-top:3rem !important}
@@ -323,6 +325,7 @@ embed,iframe,object{max-width:100%}
 .age-gate-form{max-width:800px}
 .age-gate-additional-information p{font-size:11px !important;opacity:.6;line-height:18px;max-width:40rem;margin:0 auto !important}
 .fts-powered-by-text{display:none !important}
+.fts-jal-fb-header{display:none}
 @media screen and (min-width:37.5em){.menu-toggle{display:block}
 .main-navigation ul{display:none}
 }@media only screen and (max-width:991px){.tradezone{display:block}

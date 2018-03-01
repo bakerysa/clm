@@ -1132,6 +1132,10 @@ footer {
 	margin: 0 0 1.5em;
 }
 
+.woocommerce div.product div.images .woocommerce-product-gallery__wrapper .zoomImg {
+	display: none !important;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1476,6 +1480,10 @@ object {
 		display: none;
 	}
 	}
+}
+
+.website-button {
+	margin: 2rem 0;
 }
 
 .left {
@@ -1855,8 +1863,8 @@ object {
 }
 
 .contact-cta {
-	margin-top: 6rem;
-	padding-top: 6rem;
+	margin-top: 3rem;
+	padding-top: 3rem;
 }
 
 .h-max-height {
@@ -1906,6 +1914,10 @@ object {
 
 .fts-powered-by-text {
 	display: none !important;
+}
+
+.fts-jal-fb-header {
+	display: none;
 }
 
 @import "_responsive.scss";
