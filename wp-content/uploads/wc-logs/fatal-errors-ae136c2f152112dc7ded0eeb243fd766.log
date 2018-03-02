@@ -368,3 +368,25 @@ Stack trace:
 #5 /Users/b_b0t/Sites/bakery/clm/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
 #6 /Users/b_b0t/Sites/bakery/clm/wp-includes/plugin.php(515): WP_Hook->do
 
+2018-03-02T12:13:01+00:00 CRITICAL Uncaught Error: Call to a member function get_title() on boolean in /Users/b_b0t/Sites/bakery/clm/wp-content/themes/clm/woocommerce/content-single-product.php:86
+Stack trace:
+#0 /Users/b_b0t/Sites/bakery/clm/wp-includes/template.php(690): require()
+#1 /Users/b_b0t/Sites/bakery/clm/wp-content/plugins/woocommerce/includes/wc-core-functions.php(180): load_template('/Users/b_b0t/Si...', false)
+#2 /Users/b_b0t/Sites/bakery/clm/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(561): wc_get_template_part('content', 'single-product')
+#3 /Users/b_b0t/Sites/bakery/clm/wp-includes/shortcodes.php(319): WC_Shortcodes::product_page(Array, '', 'product_page')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 /Users/b_b0t/Sites/bakery/clm/wp-includes/shortcodes.php(197): preg_replace_callback('/\\[(\\[?)(produc...', 'do_shortcode_ta...', '[product_page i...')
+#6 /Users/b_b0t/Sites/bakery/clm/wp-content/plugins/woocommerce/includes/class-wc-template-loader.php(477): do_shortcode('[product_page i...')
+#7 /Users/
+
+2018-03-02T12:13:02+00:00 CRITICAL Uncaught Error: Call to a member function get_title() on boolean in /Users/b_b0t/Sites/bakery/clm/wp-content/themes/clm/woocommerce/content-single-product.php:86
+Stack trace:
+#0 /Users/b_b0t/Sites/bakery/clm/wp-includes/template.php(690): require()
+#1 /Users/b_b0t/Sites/bakery/clm/wp-content/plugins/woocommerce/includes/wc-core-functions.php(180): load_template('/Users/b_b0t/Si...', false)
+#2 /Users/b_b0t/Sites/bakery/clm/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(561): wc_get_template_part('content', 'single-product')
+#3 /Users/b_b0t/Sites/bakery/clm/wp-includes/shortcodes.php(319): WC_Shortcodes::product_page(Array, '', 'product_page')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 /Users/b_b0t/Sites/bakery/clm/wp-includes/shortcodes.php(197): preg_replace_callback('/\\[(\\[?)(produc...', 'do_shortcode_ta...', '[product_page i...')
+#6 /Users/b_b0t/Sites/bakery/clm/wp-content/plugins/woocommerce/includes/class-wc-template-loader.php(477): do_shortcode('[product_page i...')
+#7 /Users/
+

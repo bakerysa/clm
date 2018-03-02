@@ -1,5 +1,25 @@
 @media only screen and (max-width : 991px) {
 
+.mobile-search {
+  .aws-container .aws-search-field {
+    display: block;
+    height: 3rem;
+    padding: 6px;
+    line-height: 30px;
+    font-size: 20px;
+    background: white;
+    text-transform: uppercase;
+    font-family: "din_condensedbold";
+    color: black;
+    letter-spacing: 1px;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    border: 2px solid black;
+  }
+}
+
+
   .tradezone {
   	display: block;
   }
@@ -12,7 +32,7 @@
   }
 
   .menu-toggle {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
   .mtb-100 {

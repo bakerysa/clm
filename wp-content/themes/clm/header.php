@@ -44,6 +44,7 @@
 		</div><!-- .site-branding -->
 
 		<div class="accounts">
+
 			<a target="_blank" href="https://form.myjotform.com/73382290037556" class="btn-secondary" data-toggle="modal">
 				Open An Account
 			</a>
@@ -52,11 +53,19 @@
 			</a>
 		</div>
 
-		<button class="menu-icon btn" data-toggle="modal" data-target="#navModal">
-			<i class="fa fa-bars" aria-hidden="true"></i>
-		</button>
+		<div class="menu-icon">
+			<button class="btn" data-toggle="modal" data-target="#searchModal">
+				<i class="fa fa-search" aria-hidden="true"></i>
+			</button>
+			<button class="btn" data-toggle="modal" data-target="#navModal">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</button>
+		</div>
 
 		<nav id="site-navigation" class="main-navigation">
+			<div class="mobile-search">
+				<?php echo do_shortcode( '[aws_search_form]' ); ?>
+			</div>
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'clm' ); ?></button>
 			<?php
 				wp_nav_menu( array(
@@ -84,6 +93,10 @@
 
 								<img src="<?php the_field('menu_image', 'option'); ?>" />
 
+								<div class="wine">
+									<h6><a href="https://coolwinestradezone.co.za/" target="_blank">CoolWines Tradezone<i style="font-size: 1rem;" class="fa fa-external-link" aria-hidden="true"></i></a></h6>
+								</div>
+
 
 					</div>
 					<div class="col-md-7 menu-custom">
@@ -96,11 +109,14 @@
 					</div>
 				</div>
       </div>
-			<div class="wine">
-				<h6><a href="https://coolwinestradezone.co.za/" target="_blank">CoolWines Tradezone<i style="font-size: 1rem;" class="fa fa-external-link" aria-hidden="true"></i></a></h6>
-			</div>
     </div>
   </div>
+</div>
+
+<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+<div class="container product-aux search-box" id="navModal">
+	<?php echo do_shortcode( '[aws_search_form]' ); ?>
+</div>
 </div>
 
 	</header><!-- #masthead -->

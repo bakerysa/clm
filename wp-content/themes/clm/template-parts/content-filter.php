@@ -23,18 +23,6 @@
   <header class="entry-header">
     <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
   </header><!-- .entry-header -->
-<div class="cocktail-filter">
-  <div class="popup" onclick="openPopup()">
-    <i class="fa fa-filter"><p>   Filter</p> </i>
-  </div>
-</div>
-<div class="popUpContainer" id="filterBoxPopup">
-  <div class="popupOverlay" onclick="closePopup()">
-  </div>
-  <span class="popuptext">
-    <?php echo do_shortcode( '[searchandfilter taxonomies="category" post_types="Cocktails" types="radio" headings="Base Spirits" all_items_labels="All" submit_label="Filter"]' ); ?>
-  </span>
-</div>
 
   <h2 class="cocktail-header"><?php the_title() ?></h2>
 

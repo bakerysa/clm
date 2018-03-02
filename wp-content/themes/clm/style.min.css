@@ -120,14 +120,14 @@ a:hover,a:active{outline:0}
 .close-product{display:block;width:5rem;margin:1rem auto;padding-top:2rem;padding-bottom:1rem;max-width:30px !important;position:relative}
 .close-product:hover{opacity:.5}
 .modal{background:rgba(255,255,255,0.9)}
-.modal .wine{margin-left:3rem;padding-top:1rem}
+.modal .wine{margin-left:1.5rem}
 .modal .wine a{text-transform:uppercase}
 .modal .wine a:hover{color:#c0392d;text-decoration:none}
 .tradezone{display:none;line-height:1}
 .redline{height:2px;width:6rem;background:#c0392d;position:relative;margin-top:1.5rem;margin-bottom:4rem}
 .redline .left{float:left}
 .redline .right{float:right}
-.modal-header{padding:0 15px;border:0}
+.modal-header{padding:0 15px;border:0;margin-bottom:-22px}
 .modal-title{position:relative;top:18px;left:20px}
 .modal-dialog{top:50%;-webkit-transform:translateY(-55%) !important;-ms-transform:translateY(-55%) !important;transform:translateY(-55%) !important;width:90% !important;max-width:1000px}
 .modal-content{border-radius:0 !important;box-shadow:none !important;-webkit-box-shadow:none !important;border:3px solid black !important}
@@ -156,7 +156,7 @@ a:hover,a:active{outline:0}
 footer .site-info{position:relative;text-align:center;color:white}
 footer .site-info p{display:inline;color:white}
 footer .site-info a{color:white;white-space:nowrap}
-footer .site-info .social-icons{right:1rem;bottom:-2rem;color:white;display:block;position:absolute;z-index:10}
+footer .site-info .social-icons{right:1rem;bottom:-2rem;color:white;display:block;position:absolute;z-index:10;border:1px solid black}
 footer .site-info .wine{position:absolute;left:2rem;bottom:-2rem;z-index:10}
 footer .site-info .wine a{text-transform:uppercase}
 footer .site-info .wine a:hover{color:#c0392d !important;text-decoration:none}
@@ -212,7 +212,7 @@ embed,iframe,object{max-width:100%}
 .menu-icon{position:absolute;right:20px;top:72px}
 .menu-icon .fa{margin:0 !important;padding-left:2px;padding-bottom:2px;font-size:15px}
 .menu-icon .btn{padding:.8em 1.4em}
-.accounts{position:absolute;right:6rem;top:80px}
+.accounts{position:absolute;right:11rem;top:80px}
 .accounts a{margin-right:5px}
 .accounts .btn{padding:.7rem 1.4rem .7rem 1.4rem;border:2px solid black}
 .brand-filters{text-align:center !important;max-width:550px;margin:0 auto !important}
@@ -229,6 +229,7 @@ embed,iframe,object{max-width:100%}
 .product-single-container img{margin:0 auto}
 .product-single-container .single-item{margin:0 auto;width:225px;height:225px;background-size:contain;background-repeat:no-repeat;background-position:center center}
 .product-single-container h5{max-width:225px;margin:10px auto}
+.aws-search-result .aws_result_title{text-transform:uppercase;color:black;font-size:1rem}
 .woocommerce-product-gallery__trigger{display:none}
 .pwb-single-product-brands{opacity:.4;pointer-events:none}
 .product_title{font-size:36px;letter-spacing:10px;color:black;text-align:left}
@@ -271,6 +272,9 @@ embed,iframe,object{max-width:100%}
 .cocktail{border:2px solid black;padding:2rem;margin:2rem auto}
 .cocktail span{font-weight:600}
 .search-form{display:block;margin:0 auto;max-width:18rem}
+.search-box{position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}
+.aws-container .aws-search-field{height:15rem;padding:6px;line-height:30px;font-size:80px;text-align:center;background:white;text-transform:uppercase;font-family:"din_condensedbold";color:#eee;letter-spacing:2rem}
+.mobile-search .aws-container .aws-search-field{display:none}
 .cocktail-header{text-align:center;margin-bottom:5rem}
 .cocktail-item{padding-bottom:5rem}
 .cocktail-item .cocktail-image-container{width:100%;height:100%}
@@ -328,9 +332,10 @@ embed,iframe,object{max-width:100%}
 .fts-jal-fb-header{display:none}
 @media screen and (min-width:37.5em){.menu-toggle{display:block}
 .main-navigation ul{display:none}
-}@media only screen and (max-width:991px){.tradezone{display:block}
+}@media only screen and (max-width:991px){.mobile-search .aws-container .aws-search-field{display:block;height:3rem;padding:6px;line-height:30px;font-size:20px;background:white;text-transform:uppercase;font-family:"din_condensedbold";color:black;letter-spacing:1px;margin-left:25%;margin-right:25%;width:50%;border:2px solid black}
+.tradezone{display:block}
 .site-branding{max-width:6rem;margin:.5rem;margin-top:1rem;margin-left:1rem}
-.menu-toggle{margin-top:2rem}
+.menu-toggle{margin-top:1.5rem}
 .mtb-100{margin-top:0;margin-bottom:0}
 .contact-cta{text-align:left !important;margin-top:0;padding-top:4rem}
 .redline{width:100%;margin-top:2rem;margin-bottom:2rem}

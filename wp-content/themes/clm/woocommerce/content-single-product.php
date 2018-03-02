@@ -63,7 +63,7 @@ echo '<a href="' . $siteURL . '/the-brands' . '" ><img class="close-product" dat
 	<?php woocommerce_show_product_images() ?>
 
 	<div class="summary entry-summary">
-
+    <?php echo '<h3>' . get_the_title() . '</h3>' ?>
 		<?php
 			/**
 			 * woocommerce_single_product_summary hook.

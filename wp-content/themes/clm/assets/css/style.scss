@@ -675,8 +675,7 @@ a:hover, a:active {
 .modal {
 	background: rgba(255,255,255,0.9);
 	.wine {
-		margin-left: 3rem;
-		padding-top: 1rem;
+		margin-left: 1.5rem;
 		a {
 			text-transform: uppercase;
 			&:hover {
@@ -710,6 +709,7 @@ a:hover, a:active {
 .modal-header {
 	padding: 0 15px;
 	border: 0;
+  margin-bottom: -22px;
 }
 .modal-title {
 	position: relative;
@@ -932,6 +932,7 @@ footer {
 			display: block;
 			position: absolute;
 			z-index: 10;
+			border: 1px solid black;
 		}
 		.wine {
 			position: absolute;
@@ -1292,7 +1293,7 @@ object {
 
 .accounts {
 	position: absolute;
-	right: 6rem;
+	right: 11rem;
 	top: 80px;
 	a {
 		margin-right: 5px;
@@ -1371,6 +1372,12 @@ object {
     margin: 10px auto;
 	}
 }
+
+.aws-search-result .aws_result_title {
+    text-transform: uppercase;
+    color: black;
+    font-size: 1rem;
+	}
 
 .woocommerce-product-gallery__trigger {
 	display: none;
@@ -1582,6 +1589,32 @@ object {
 	display: block;
 	margin: 0 auto;
 	max-width: 18rem;
+}
+
+.search-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.aws-container .aws-search-field {
+	height: 15rem;
+  padding: 6px;
+  line-height: 30px;
+  font-size: 80px;
+  text-align: center;
+  background: white;
+  text-transform: uppercase;
+  font-family: "din_condensedbold";
+  color: #eeeeee;
+  letter-spacing: 2rem;
+}
+
+.mobile-search {
+  .aws-container .aws-search-field {
+		display: none;
+  }
 }
 
 .cocktail-header {

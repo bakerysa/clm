@@ -52,11 +52,19 @@
 			</a>
 		</div>
 
-		<button class="menu-icon btn" data-toggle="modal" data-target="#navModal">
-			<i class="fa fa-bars" aria-hidden="true"></i>
-		</button>
+		<div class="menu-icon">
+			<button class="btn" data-toggle="modal" data-target="#searchModal">
+				<i class="fa fa-search" aria-hidden="true"></i>
+			</button>
+			<button class="btn" data-toggle="modal" data-target="#navModal">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</button>
+		</div>
 
 		<nav id="site-navigation" class="main-navigation">
+			<div class="mobile-search">
+				<?php echo do_shortcode( '[aws_search_form]' ); ?>
+			</div>
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'clm' ); ?></button>
 			<?php
 				wp_nav_menu( array(
@@ -101,6 +109,12 @@
 			</div>
     </div>
   </div>
+</div>
+
+<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+<div class="container product-aux search-box" id="navModal">
+	<?php echo do_shortcode( '[aws_search_form]' ); ?>
+</div>
 </div>
 
 	</header><!-- #masthead -->
