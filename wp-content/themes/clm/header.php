@@ -45,10 +45,10 @@
 
 		<div class="accounts">
 
-			<a target="_blank" href="https://form.myjotform.com/73382290037556" class="btn-secondary" data-toggle="modal">
+			<a target="_blank" href="https://form.myjotform.com/73382290037556" class="btn-secondary btn-left" data-toggle="modal">
 				Open An Account
 			</a>
-			<a target="_blank" href="https://coolwinestradezone.co.za/" class="btn-secondary" data-toggle="modal">
+			<a target="_blank" href="https://coolwinestradezone.co.za/" class="btn-secondary btn-right" data-toggle="modal">
 				Place An Order
 			</a>
 		</div>
@@ -63,9 +63,6 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation">
-			<div class="mobile-search">
-				<?php echo do_shortcode( '[aws_search_form]' ); ?>
-			</div>
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'clm' ); ?></button>
 			<?php
 				wp_nav_menu( array(
@@ -111,6 +108,10 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="mobile-search">
+	<?php echo do_shortcode( '[aws_search_form]' ); ?>
 </div>
 
 <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">

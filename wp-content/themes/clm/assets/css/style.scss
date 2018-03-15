@@ -418,7 +418,7 @@ table {
 	font-size: 0.75rem;
 	text-transform: uppercase;
 	line-height: 1;
-	padding: 0.6em 1.4em 0.66em 1.4em;
+	padding: 0.6em 1em 0.6em 1em;
 	letter-spacing: 0.2rem;
 	font-family: $font-din;
 	border: 1.5px solid #000;
@@ -812,7 +812,9 @@ a:hover, a:active {
   max-height: 40px!important;
 }
 .menu-toggle[aria-expanded="false"]{
-	position: relative;
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
 	background: black!important;
 	color: black!important;
 	&:before {
@@ -827,7 +829,9 @@ a:hover, a:active {
 }
 
 .menu-toggle[aria-expanded="true"]{
-	position: relative;
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
 	background: white!important;
 	border: 2px solid black;
 	color: white!important;
@@ -1185,7 +1189,6 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
 	display: inline-block;
-	pointer-events: none;
 }
 
 .four-content {
